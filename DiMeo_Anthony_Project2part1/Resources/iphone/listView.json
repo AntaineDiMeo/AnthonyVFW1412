@@ -1,0 +1,11 @@
+var test = require("app");
+
+var teamOne = [
+{name: "Charizard", description: "Charizard is a fire/flying type pokemon. Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself."},
+{name: "Lucario", description: "Lucario is a fighting/steel type pokemon. It has the ability to sense the Auras of all things. It understands human speech.. It's said that no foe can remain invisible to Lucario, since it can detect Auras. Even foes it could not otherwise see."},
+{name: "Gengar", description: "Gengar is a ghost/poison type pokemon. It hides in shadows. It is said that if Gengar is hiding, it cools the area by nearly 10 degrees Fahrenheit.. To steal the life of its target, it slips into the prey's shadow and silently waits for an opportunity."},
+{name: "Vulcarona", description: "Vulcarona is a bug/fire type pokemon. When volcanic ash darkened the atmosphere, it is said that Volcarona's fire provided a replacement for the sun.. A sea of fire engulfs the surroundings of their battles, since they use their six wings to scatter their ember scales."}  
+{name: "Florges", description: "Florges is a fairy type pokemon. It claims exquisite flower gardens as its territory, and it obtains power from basking in the energy emitted by flowering plants."}  
+{name: "Alakazam", description: "Alakazam is a psychic type pokemon. Its brain can outperform a super-computer. Its intelligence quotient is said to be 5,000. Its brain cells multiply continually until it dies. As a result, it remembers everything."}  
+
+];

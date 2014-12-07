@@ -1,0 +1,11 @@
+
+var teamOne = [
+{name: "Charizard", description: "Health: 266, Attack: 155, Defense: 165, Sp.Atk: 220, Sp.Def: 184, Speed: 198"},
+{name: "Lucario",   description: "Health: 250, Attack: 202, Defense: 160, Sp.Atk: 211, Sp.Def: 160  Speed: 200"},
+{name: "Gengar",    description: "Health: 230, Attack: 150, Defense: 131, Sp.Atk: 270, Sp.Def: 150, Speed: 220"},
+{name: "Vulcarona", description: "Health: 300, Attack: 112, Defense: 130, Sp.Atk: 265, Sp.Def: 201, Speed: 191"},
+{name: "Florges",   description: "Health: 270, Attack: 130, Defense: 135, Sp.Atk: 215, Sp.Def: 304, Speed: 142"},
+{name: "Alakazam",  description: "Health: 220, Attack: 94,  Defense: 100, Sp.Atk: 280, Sp.Def: 180, Speed: 320"},
+  
+
+];

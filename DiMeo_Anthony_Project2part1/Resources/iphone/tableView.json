@@ -1,0 +1,92 @@
+var transfer = require("app");
+
+var teamOne = [
+{name: "Charizard", description: "Health: 266, Attack: 155, Defense: 165, Sp.Atk: 220, Sp.Def: 184, Speed: 198"},
+{name: "Lucario",   description: "Health: 250, Attack: 202, Defense: 160, Sp.Atk: 211, Sp.Def: 160  Speed: 200"},
+{name: "Gengar",    description: "Health: 230, Attack: 150, Defense: 131, Sp.Atk: 270, Sp.Def: 150, Speed: 220"},
+{name: "Vulcarona", description: "Health: 300, Attack: 112, Defense: 130, Sp.Atk: 265, Sp.Def: 201, Speed: 191"},
+{name: "Florges",   description: "Health: 270, Attack: 130, Defense: 135, Sp.Atk: 215, Sp.Def: 304, Speed: 142"},
+{name: "Alakazam",  description: "Health: 220, Attack: 94,  Defense: 100, Sp.Atk: 280, Sp.Def: 180, Speed: 320"},
+  
+
+];
+
+
+
+
+var teamOne = [
+{name: "Charizard", description: "A grass type pokemon"},
+{name: "Lucario", description: "Lucario is a psychic pokemon"},
+{name: "Gengar", description: "Gengar is a ghost type pokemon"},
+{name: "Vulcarona", description: "Vulcarona is a fire type pokemon"}  
+
+];
+
+var teamTwo = [
+{name: "Samurott", description: "Samurott is a water type pokemon"},
+{name: "Hydreigon", description: "Hydreigon is a dragon type pokemon"},
+{name: "Florges", description: "Florges is a fairy type pokemon"},
+{name: "Banette", description: "Banette is a ghost type pokemon"}
+];
+
+var table = Ti.UI.createTableView({
+	style: Ti.UI.iPhone.TableViewStyle.GROUPED
+});
+
+var teamOneSection = Ti.UI.createTableViewSection({
+	headerTitle: "Team One"
+});
+
+var teamTwoSection = Ti.UI.createTableViewSection({
+	headerTitle: "Team Two"
+});
+
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "black",
+		title: this.title,
+		modal: true
+	});
+	
+	var detailText = Ti.UI.createLabel({
+		text: this.desc,
+		font: {fontSize: 24, fontFamily: "Avenir Black Oblique"},
+		color: "white"
+	});
+		detailWindow.add(detailText);
+		detailWindow.open();
+		detailWindow.addEventListener("click", function(){
+		detailWindow.close();
+		});
+};
+
+for(var i=0, j=teamOne.length; i<j; i++){
+	var theRow = Ti.UI.createTableViewRow({
+		title: teamOne[i].name,
+		hasChild: true,
+		desc: teamOne[i].description
+	});
+	teamOneSection.add(theRow);
+	theRow.addEventListener("click", getDetail);
+	
+}
+for(var i=0, j=teamTwo.length; i<j; i++){
+	var theRow = Ti.UI.createTableViewRow({
+		title: teamTwo[i].name,
+		hasDetail: true,
+		desc: teamTwo[i].description
+	});
+teamTwoSection.add(theRow);
+theRow.addEventListener("click", getDetail);
+}
+var mySections = [teamOneSection, teamTwoSection];
+table.setData(mySections);
+
+mainWindow.add(table);
+mainWindow.open();
+
+
+
+
+
+
